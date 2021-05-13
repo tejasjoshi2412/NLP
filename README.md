@@ -1,6 +1,6 @@
 # NLP
 
-This ipynb file is an implementation of the Natural Langauge Processing project.
+This ipynb contains an implementation and results for the Natural Langauge Processing project.
 
 The Problem Statement here consists of the classifying the YELP dataset reviews with respect to the 1 star reviews and 5 star reviews.
 
@@ -34,3 +34,59 @@ Steps for Execution:
 14. Now lets go back to the Logistic Regression model and then evaluate the perfromance of the model on the dataset.
 15. After evaluation it reported the same accuracy as that of the Random Forest Classifier.
 16. The model is now ready and its upto us which one to choose !!!!!! 
+
+
+Results :
+
+1. TfidfTransformer and Multinomial Naive Bayes:
+
+**Classification Report:
+
+              precision    recall  f1-score   support
+
+           1       0.00      0.00      0.00       228
+           5       0.81      1.00      0.90       998
+
+    accuracy                           0.81      1226
+   macro avg       0.41      0.50      0.45      1226
+weighted avg       0.66      0.81      0.73      1226
+
+**Confusion Matrix:
+
+[[  0 228]
+ [  0 998]]
+
+2. Removing TfidfTransformer and using RandomForestClassifier:
+
+              precision    recall  f1-score   support
+
+           1       0.95      0.23      0.37       228
+           5       0.85      1.00      0.92       998
+
+    accuracy                           0.85      1226
+   macro avg       0.90      0.61      0.64      1226
+weighted avg       0.87      0.85      0.82      1226
+
+
+
+[[ 52 176]
+ [  3 995]]
+
+3. Removing TfidfTransformer and using basic LogisticRegressor:
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+           1       0.95      0.23      0.37       228
+           5       0.85      1.00      0.92       998
+
+    accuracy                           0.85      1226
+   macro avg       0.90      0.61      0.64      1226
+weighted avg       0.87      0.85      0.82      1226
+
+Confusion Report:
+
+[[ 52 176]
+ [  3 995]]
+
